@@ -6,13 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacts</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <h1>Hello to contacts</h1>
-  <a href="/new">new contact</a>
+  <h1>Contacts</h1>
+  <div id="contacts_search">
+    <input type="text" name="search_btn" id="search_btn" placeholder="Search">
+    <a href="/new">
+      <i class="fas fa-user-plus"></i>
+    </a>
+  </div>
   <% contacts.forEach(element => { %>
-  <p><%= element.firstName %></p>
+  <div class="list-person">
+    <a href=<%= `/details/${element._id}` %>>
+      <% if (element.profile_bild) { %>
+      <img src=<%= `${element.profile_bild}` %> alt="">
+      <% } else {%>
+      <img src="/anonym.png" alt="">
+      <%}%>
+      <p><%= element.firstName %> <%= element.lastName %></p>
+    </a>
+    <i class="fas fa-star"></i>
+  </div>
   <% }) %>
 </body>
 

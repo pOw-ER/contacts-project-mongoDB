@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Details</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <section>
+    <% if (contact.profile_bild) { %>
+    <img src=<%= `${contact.profile_bild}` %> alt="">
+    <% } else {%>
+    <img src="/anonym.png" alt="">
+    <%}%>
+    <p><%= contact.firstName %> <%= contact.lastName %></p><br>
+    <a href=<%= `/delete/${contact._id}` %>>
+      <i class="fas fa-trash-alt"></i>
+    </a>
+
+  </section>
+
+</body>
+
+</html>

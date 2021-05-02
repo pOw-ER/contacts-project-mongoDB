@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+h1 {
+  padding: 10px 5%;
+}
+.list-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+}
+.list-person a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+.list-person a img {
+  width: 30px;
+  padding-right: 10px;
+  border-radius: 50px;
+}
+.list-person a p {
+  margin: 0;
+}
+#contacts_search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+}
+#contacts_search a {
+  color: #000;
+}
+#contacts_search input {
+  width: 85%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 10px;
+}
+#contacts_search a i {
+  font-size: 24px;
+}

@@ -5,10 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>New Contact</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
+  <form action="/newContact" enctype="multipart/form-data" method="post">
+    <label for="profilPic" class="custom-file-upload">
+      <i class="fa fa-cloud-upload"></i> Upload image for your profile
+    </label>
+    <input type="file" name="profilPic" id="profilPic" multiple="multiple" />
+    <input type="text" name="fname" id="fname" placeholder="First Name">
+    <input type="text" name="lname" id="lname" placeholder="Last Name">
+    <input type="text" name="organization" id="organization" placeholder="Organisation">
+    <input type="number" name="telNumber" id="telNumber" placeholder="´Telefon Number">
+    <input type="submit" value="New Contact">
+  </form>
 
 </body>
 
